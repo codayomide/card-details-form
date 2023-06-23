@@ -1,0 +1,66 @@
+$neutral-white: hsl(0, 0%, 100%);
+$light-grey: hsl(270, 3%, 87%);
+$dark-grey: (279, 6%, 55%);
+$card-container-bg: url("../../assets/images/bg-main-mobile.png");
+$very-dark-violet: hsl(278, 68%, 11%);
+
+@mixin media-ss {
+    @media screen and (min-width: 0px) {
+        @content;
+    }
+}
+
+@mixin media-xs {
+    @media screen and (min-width: 355px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 930px) {
+        @content;
+    }
+}
+
+@mixin media-lg__1100px {
+    @media screen and (min-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin media-sl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+@mixin general-font-config {
+    font-size: 18px;
+    font-weight: 500;
+}

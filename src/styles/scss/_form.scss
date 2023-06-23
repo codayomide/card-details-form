@@ -1,0 +1,98 @@
+#form-container {
+    button {
+        @include general-font-config;
+        width: 100%;
+        padding: 15px 10px;
+        border-radius: 7px;
+        color: $neutral-white;
+        background-color: $very-dark-violet;
+        border: none;
+        cursor: pointer;
+    }
+
+    #complete-state {
+        align-items: center;
+        text-align: center;
+
+        img {
+            width: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            color: $very-dark-violet;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $very-dark-violet;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+#form {
+    width: 100%;
+    margin: 3rem 0 0 0;
+
+    input, label {
+        width: 100%;
+    }
+
+    label {
+        color: $very-dark-violet;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    input {
+        @include general-font-config;
+        padding: 12px 10px;
+        border-radius: 7px;
+        border: solid 2px $light-grey;
+        margin: 10px 0 15px 0;
+
+        &::placeholder {
+            color: $dark-grey;
+        }
+    }
+
+    // button {
+    //     @include general-font-config;
+    //     padding: 15px 10px;
+    //     border-radius: 7px;
+    //     color: $neutral-white;
+    //     background-color: $very-dark-violet;
+    //     border: none;
+    //     cursor: pointer;
+    // }
+
+    & > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // padding: 5rem 2rem;
+    }
+
+    .input-container__type-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > div {
+            width: 48%;
+        }
+    }
+
+    #date-input-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > input {
+            width: 48%;
+        }
+    }
+}

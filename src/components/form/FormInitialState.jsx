@@ -9,8 +9,14 @@ const FormInitialState = () => {
     const [cvc, setCvc] = useState('');
     const [isPending, setIsPending] = useState(false);
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const cardData = { name, cardNumber, date, cvc };
+        console.log(cardData);
+    }
+
     return (
-        <form id="form">
+        <form id="form" onSubmit={handleSubmit}>
             <div className="input-container">
                 <label htmlFor="Name">Cardholder Name</label>
                 <input

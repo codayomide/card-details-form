@@ -1,18 +1,10 @@
 import { useState } from "react";
 
-const FormInitialState = () => {
-    const [name, setName] = useState('');
-    const [cardNumber, setCardNumber] = useState('');
-    const [month, setMonth] = useState('');
-    const [year, setYear] = useState('');
-    const date = {month, year};
-    const [cvc, setCvc] = useState('');
+const FormInitialState = ({ onInputChange }) => {
     const [isPending, setIsPending] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const cardData = { name, cardNumber, date, cvc };
-        console.log(cardData);
     }
 
     return (
@@ -25,7 +17,7 @@ const FormInitialState = () => {
                     id="name"
                     name="name"
                     required
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={onInputChange}
                 />
             </div>
 
@@ -36,7 +28,7 @@ const FormInitialState = () => {
                     id="number"
                     name="number"
                     required
-                    onChange={(e) => setCardNumber(e.target.value)}
+                    onChange={onInputChange}
                 />
             </div>
 
@@ -51,7 +43,7 @@ const FormInitialState = () => {
                                 id="month"
                                 name="mm"
                                 required
-                                onChange={(e) => setMonth(e.target.value)}
+                                onChange={onInputChange}
                             />
                             <input  
                                 type="text"
@@ -59,7 +51,7 @@ const FormInitialState = () => {
                                 id="year"
                                 name="yy"
                                 required
-                                onChange={(e) => setYear(e.target.value)}
+                                onChange={onInputChange}
                             />
                         </div>
                     </div>
@@ -72,7 +64,7 @@ const FormInitialState = () => {
                         placeholder="e.g. 123"
                         name="cvc"
                         required
-                        onChange={(e) => setCvc(e.target.value)}
+                        onChange={onInputChange}
                     />
                 </div>
             </div>

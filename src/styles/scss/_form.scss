@@ -8,6 +8,11 @@
         background-color: $very-dark-violet;
         border: none;
         cursor: pointer;
+        transition: all 0.4s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 
     #complete-state {

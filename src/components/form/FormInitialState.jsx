@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const FormInitialState = ({ onInputChange }) => {
+const FormInitialState = ({ onInputChange, formData }) => {
     const [isPending, setIsPending] = useState(false);
 
     const handleSubmit = (e) => {
@@ -16,8 +16,10 @@ const FormInitialState = ({ onInputChange }) => {
                     placeholder="e.g. Jane Appleseed"
                     id="name"
                     name="name"
+                    value={formData.name}
                     required
                     onChange={onInputChange}
+                    maxLength={64}
                 />
             </div>
 
@@ -26,9 +28,11 @@ const FormInitialState = ({ onInputChange }) => {
                 <input type="text"
                     placeholder="e.g. 1234 5678 9123 0000"
                     id="number"
-                    name="number"
+                    name="cardNumber"
+                    value={formData.cardNumber}
                     required
                     onChange={onInputChange}
+                    maxLength={19}
                 />
             </div>
 
@@ -41,17 +45,21 @@ const FormInitialState = ({ onInputChange }) => {
                                 type="text" 
                                 placeholder="MM"
                                 id="month"
-                                name="mm"
+                                name="month"
+                                value={formData.month}
                                 required
                                 onChange={onInputChange}
+                                maxLength={2}
                             />
                             <input  
                                 type="text"
                                 placeholder="YY"
                                 id="year"
-                                name="yy"
+                                name="year"
+                                value={formData.year}
                                 required
                                 onChange={onInputChange}
+                                maxLength={2}
                             />
                         </div>
                     </div>
@@ -63,8 +71,10 @@ const FormInitialState = ({ onInputChange }) => {
                         type="text"
                         placeholder="e.g. 123"
                         name="cvc"
+                        value={formData.cvc}
                         required
                         onChange={onInputChange}
+                        maxLength={3}
                     />
                 </div>
             </div>

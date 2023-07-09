@@ -9,12 +9,11 @@ const Main = () => {
     const [formData, setFormData] = useState({
         name: '',
         cardNumber: '',
-        date: {
-            month: '',
-            year: '',
-        },
+        month: '',
+        year: '',
         cvc: ''
-    })
+    });
+
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -23,7 +22,7 @@ const Main = () => {
             ...prevData,
             [name]: value,
         }));
-    }
+    };
     
     return (
         <main id="main">
@@ -32,7 +31,10 @@ const Main = () => {
             <section id="form-container">
                 {validate
 					? <FormCompletedState />
-					: <FormInitialState onInputChange={handleInputChange} />
+					: <FormInitialState 
+                        onInputChange={handleInputChange}
+                        formData={formData}
+                    />
 				}
             </section>
         </main>

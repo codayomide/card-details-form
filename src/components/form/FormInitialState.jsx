@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const FormInitialState = ({ onInputChange, formData, onSubmit, errors }) => {
     // const [isPending, setIsPending] = useState(false);
 

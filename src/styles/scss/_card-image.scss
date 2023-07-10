@@ -30,6 +30,10 @@
             justify-content: space-between;
         }
 
+        #card-number {
+            text-transform: uppercase;
+        }
+
         #card-name {
             text-transform: uppercase;
         }
@@ -54,6 +58,7 @@
             right: 15%;
             top: 44%;
             font-size: 14px;
+            text-transform: uppercase;
         }
     }
 }

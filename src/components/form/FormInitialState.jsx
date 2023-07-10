@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const FormInitialState = ({ onInputChange, formData, onSubmit, errors }) => {
-    const [isPending, setIsPending] = useState(false);
+    // const [isPending, setIsPending] = useState(false);
 
     return (
         <form id="form" onSubmit={onSubmit}>
@@ -77,6 +77,8 @@ const FormInitialState = ({ onInputChange, formData, onSubmit, errors }) => {
                         value={formData.cvc}
                         onChange={onInputChange}
                         maxLength={3}
+                        min={0}
+                        max={99}
                         style={errors.cvc ? {borderColor: 'hsl(0, 100%, 66%)'} : {borderColor: 'hsl(279, 6%, 55%)'}}
                     />
                     {errors.cvc && <p>{errors.cvc}</p>}

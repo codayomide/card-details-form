@@ -1,21 +1,17 @@
 import cardLogo from '../assets/images/card-logo.svg';
-import { useFormDataContext } from './form/FormInitialState';
 
 const Cards = ({ formData }) => {
     const { name, cardNumber, month, year, cvc } = formData;
-    console.log(formData);
-
-    const defaultcardNumberValue = '0000000000000000';
 
     const formatText = (text) => {
         let formattedText = '';
     
         // Remove non-digit characters from the text
-        const digitsOnly = text.replace(/\D/g, '');
+        // const digitsOnly = text.replace(/\D/g, '');
     
         // Apply the pattern "0000 0000 0000 0000"
-        for (let i = 0; i < digitsOnly.length; i += 4) {
-          formattedText += digitsOnly.substring(i, i + 4) + ' ';
+        for (let i = 0; i < text.length; i += 4) {
+          formattedText += text.substring(i, i + 4) + ' ';
         }
     
         return formattedText.trim();

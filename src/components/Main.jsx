@@ -37,7 +37,7 @@ const Main = () => {
 
         if (!formData.cardNumber) {
             validationErrors.cardNumber = `Can't be blank`;
-        } else if (!/[0-9]*/.test(formData.cardNumber)) {
+        } else if (!/^[0-9]+$/.test(formData.cardNumber)) {
             validationErrors.cardNumber = 'Wrong format, numbers only';
         } else if (formData.cardNumber.length < 16) {
             validationErrors.cardNumber = 'Too short';
@@ -57,8 +57,10 @@ const Main = () => {
 
         if (!formData.cvc) {
             validationErrors.cvc = `Can't be blank`
-        } else if (!/[0-9]*/.test(formData.cvc)) {
-            validationErrors.cardNumber = 'Wrong format, numbers only'
+        } else if (!/^[0-9]+$/.test(formData.cvc)) {
+            validationErrors.cvc = 'Wrong format, numbers only';
+        } else if (formData.cvc.length < 3) {
+            validationErrors.cvc = 'Too short';
         }
 
         setErrors(validationErrors);

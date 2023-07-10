@@ -34,6 +34,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.card__front #card-number {
+  text-transform: uppercase;
+}
 .card__front #card-name {
   text-transform: uppercase;
 }
@@ -51,6 +54,7 @@
   right: 15%;
   top: 44%;
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 #form-container {

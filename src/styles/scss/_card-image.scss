@@ -31,7 +31,12 @@
         }
 
         #card-name {
-            
+            text-transform: uppercase;
+        }
+
+        #card-name,
+        #card-date {
+            font-size: 14px;
         }
     }
 
@@ -47,7 +52,8 @@
         #card-cvc {
             position: absolute;
             right: 15%;
-            top: 43%;
+            top: 44%;
+            font-size: 14px;
         }
     }
 }

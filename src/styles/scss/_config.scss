@@ -3,6 +3,7 @@ $light-grey: hsl(270, 3%, 87%);
 $dark-grey: (279, 6%, 55%);
 $card-container-bg: url("../../assets/images/bg-main-mobile.png");
 $very-dark-violet: hsl(278, 68%, 11%);
+$error-red: hsl(0, 100%, 66%);
 
 @mixin media-ss {
     @media screen and (min-width: 0px) {

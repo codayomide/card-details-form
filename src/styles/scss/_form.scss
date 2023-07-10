@@ -1,4 +1,7 @@
 #form-container {
+    display: flex;
+    flex-direction: column;
+
     button {
         @include general-font-config;
         width: 100%;
@@ -45,6 +48,10 @@
         width: 100%;
     }
 
+    p {
+        color: $error-red;
+    }
+
     label {
         color: $very-dark-violet;
         font-size: 13px;
@@ -57,22 +64,12 @@
         padding: 12px 10px;
         border-radius: 7px;
         border: solid 2px $light-grey;
-        margin: 10px 0 15px 0;
+        margin: 10px 0 5px 0;
 
         &::placeholder {
             color: $dark-grey;
         }
     }
-
-    // button {
-    //     @include general-font-config;
-    //     padding: 15px 10px;
-    //     border-radius: 7px;
-    //     color: $neutral-white;
-    //     background-color: $very-dark-violet;
-    //     border: none;
-    //     cursor: pointer;
-    // }
 
     & > div {
         width: 100%;

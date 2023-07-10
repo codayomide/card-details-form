@@ -36,6 +36,14 @@
             margin-bottom: 0;
         }
     }
+
+    #form-container {
+        #complete-state {
+            margin-top: 5rem;
+            width: 90%;
+            align-self: center;
+        }
+    }
 }
 
 @include media-xs {
@@ -80,9 +88,9 @@
         &__back {
             left: 35%;
 
-            #card-cvc {
-                font-size: 18px;
-            }
+            // #card-cvc {
+            //     font-size: 13px;
+            // }
         }
     }
 
@@ -116,6 +124,12 @@
 
     #form-container {
         margin-top: 3rem;
+
+        #complete-state {
+            margin-top: 5rem;
+            width: 80%;
+            align-self: center;
+        }
     }
 
     #form {
@@ -156,6 +170,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        #complete-state {
+            width: auto;
+        }
     }
 
     #form {
@@ -172,7 +190,7 @@
 
         .input-container,
         .input-container-type-2 {
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
     }
 }
